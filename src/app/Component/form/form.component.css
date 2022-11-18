@@ -1,0 +1,97 @@
+input[type="text"]{
+  font-size: 30px;
+  width: 245px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+input[type="date"]{
+  font-size: 30px;
+  padding-right: 5px;
+  padding-bottom: 10px;
+  width: 250px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+select{
+  font-size: 30px;
+  padding-right: 5px;
+  padding-bottom: 10px;
+  width: 200px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+ol{
+  background-color: white;
+  color: black;
+  list-style-type: none;
+  width: 250px;
+  margin-top: 5px;
+  border: 1px solid rgb(255, 253, 253);
+  box-sizing: border-box;
+  box-shadow: rgb(255, 255, 255) 0px 1px 2px,
+              rgb(255, 255, 255) 0px 1px 3px;
+              position: absolute;
+}
+li{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 20px;
+  margin-bottom: 20px;
+  position: relative;
+  cursor: pointer;
+}
+li:hover{
+  background-color: rgba(141, 141, 141, 0.186);
+}
+fa-plane-departure{
+  font-size: 20px;
+  color: rgba(128, 128, 128, 0.875);
+}
+fa-plane-arrival{
+  font-size: 20px;
+  color: rgba(128, 128, 128, 0.893);
+}
+
+.dropdown{
+  position: relative;
+}
+.dropdown-menu{
+  position: absolute;
+}
+.input2{
+  margin-left: -25px;
+}
+.input3{
+  margin-left: -25px;
+}
+.input4{
+  margin-left: -40px;
+}
+.input5{
+  margin-left: -40px;
+
+}
+.btnFormsource{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 15px;
+  background-color: #09a99c;
+  border : 1px solid#09a99c;
+  border-top-left-radius: 5px ;
+  border-top-right-radius:5px  ;
+  border-end-start-radius: 5px  ;
+  border-end-end-radius: 5px  ;
+  width: 200px;
+  height: 50px;
+  font-size: 30px;
+  color: white;
+}
+.btnFormsource:hover{
+  background-color: crimson;
+  border : 1px solid crimson;
+}
+#FlyForm{
+  margin-top: 250px;
+}

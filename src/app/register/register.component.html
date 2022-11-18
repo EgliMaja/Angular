@@ -1,0 +1,55 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" >
+<form [formGroup]="user">
+  <h1>Register</h1>
+  <hr>
+<div class="row">
+  <mat-form-field [style.width.px]=357 class="example-full-width"  appearance="outline">
+    <mat-label>Full Name</mat-label>
+    <input matInput type="text" placeholder="Full Name" name="name" formControlName="name" [(ngModel)]="client.name">
+    <mat-hint style="color:red ;" *ngIf="user.get('name')?.touched && user.get('name')?.errors">
+      Invalid Name
+    </mat-hint>
+  </mat-form-field>
+</div>
+<hr>
+<div class="row">
+  <mat-form-field [style.width.px]=357 class="example-full-width"  appearance="outline">
+    <mat-label>E-mail</mat-label>
+    <input matInput type="email" placeholder="e-mail" name="email" formControlName="email"  [(ngModel)]="client.email">
+  </mat-form-field>
+  <mat-hint style="color:red ;" *ngIf="user.get('email')?.touched && user.get('email')?.errors">
+    Invalid e-mail
+  </mat-hint>
+  </div>
+  <hr>
+<div class="row">
+  <mat-form-field [style.width.px]=357 class="example-full-width"  appearance="outline">
+    <mat-label>Age</mat-label>
+    <input matInput type="number" placeholder="Age" name="age" formControlName="age"  [(ngModel)]="client.age" >
+  </mat-form-field>
+  <mat-hint style="color:red ;" *ngIf="user.get('age')?.touched && user.get('age')?.errors">
+    Under the premitted age!
+  </mat-hint>
+</div>
+<hr>
+<div class="row">
+  <mat-form-field [style.width.px]=357 class="example-full-width"  appearance="outline">
+    <mat-label>Password</mat-label>
+    <input matInput type="password" placeholder="password" name="password" formControlName="password"  [(ngModel)]="client.password">
+  </mat-form-field>
+  <mat-hint style="color:red ;" *ngIf="user.get('password')?.touched && user.get('password')?.errors">
+    Invalid password
+  </mat-hint>
+
+  <mat-form-field [style.width.px]=357 class="example-full-width"  appearance="outline">
+    <mat-label>Confirm Password</mat-label>
+    <input matInput type="confirm password" placeholder="confirm password" formControlName="confirmpass" name="confirmpass">
+  </mat-form-field>
+  <mat-hint style="color:red ;" *ngIf="user.get('confirmpass')?.touched && user.get('confirmpass')?.errors">
+    Invalid password
+  </mat-hint>
+
+</div>
+<button class="btn btn-success"  (click)="addUser()">REGISTER</button>
+<hr>
+</form>

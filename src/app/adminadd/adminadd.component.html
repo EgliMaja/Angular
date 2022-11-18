@@ -1,0 +1,100 @@
+<div style="text-align: right;">
+  <button mat-button mat-dialog-close style="color: red;">x</button></div>
+  <h1 style="text-align: center; color: gray;"><b>Aircraft Managment System</b></h1>
+  <hr>
+  <div class="container-fluid">
+    <form [formGroup]="ADD">
+      <!-- Fly From input -->
+    <div class="row">
+      <div class="col-4">
+        <mat-form-field appearance="outline" [style.width.px]=357 >
+          <mat-label>From Ariport</mat-label>
+          <mat-select name="FlyFrom"  formControlName="FlyFrom" [(ngModel)]="fly.flyFrom">
+            <mat-option *ngFor="let FlyFrom of flyFrom" [value]="FlyFrom.value">
+              {{FlyFrom.viewValue}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+      <!-- Fly To  input-->
+      <div class="col-4">
+        <mat-form-field appearance="outline" [style.width.px]=357 >
+          <mat-label>To Airport</mat-label>
+          <mat-select name="FlyTo"  formControlName="FlyTo" [(ngModel)]="fly.flyTo">
+            <mat-option *ngFor="let FlyTo of flyTo" [value]="FlyTo.value">
+              {{FlyTo.viewValue}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+    <!-- Aircraft ID input -->
+      <div class="col-4">
+        <mat-form-field [style.width.px]=357 class="example-full-width"  appearance="outline">
+          <mat-label>Aircraft ID</mat-label>
+          <input matInput type="number" placeholder="Enter ID Aircraft" name="aircraftID" formControlName="aircraftID" [(ngModel)]="fly.aircraftID">
+          <mat-hint style="color:red ;" *ngIf="ADD.get('aircraftID') && ADD.get('aircraftID')?.errors">
+           Invalid ID
+          </mat-hint>
+        </mat-form-field>
+      </div>
+
+      <div class="col-4">
+        <mat-form-field  [style.width.px]=357 class="example-full-width"  appearance="outline">
+          <mat-label>Air Company Name</mat-label>
+          <input matInput type="text" placeholder="Enter Air Company" name="aircraftName" formControlName="aircraftName" [(ngModel)]="fly.aircraftName">
+          <mat-hint style="color:red ;" *ngIf="ADD.get('aircraftName') && ADD.get('aircraftName')?.errors">
+            Invalid Name
+           </mat-hint>
+        </mat-form-field>
+      </div>
+
+      <div class="col-4">
+        <mat-form-field [style.width.px]=357 class="example-full-width"  appearance="outline">
+          <mat-label>Depart</mat-label>
+          <input matInput type="date"  name="depart"  [min]="FromDate"  formControlName="depart" [(ngModel)]="fly.depart" >
+          <mat-hint style="color:red ;" *ngIf="ADD.get('depart') && ADD.get('depart')?.errors">
+            Put Date
+           </mat-hint>
+        </mat-form-field>
+      </div>
+
+      <div class="col-4">
+        <mat-form-field  [style.width.px]=357 class="example-full-width"  appearance="outline">
+          <mat-label>Return</mat-label>
+          <input matInput type="date"  name="return"  [min]="DepartDate" formControlName="return" [(ngModel)]="fly.return" >
+          <mat-hint style="color:red ;" *ngIf="ADD.get('return') && ADD.get('return')?.errors">
+            Put Date
+           </mat-hint>
+        </mat-form-field>
+      </div>
+
+      <div class="col-4">
+        <mat-form-field  [style.width.px]=357 class="example-full-width"  appearance="outline">
+          <mat-label>Departure Time</mat-label>
+          <input matInput type="time"  name="start"  formControlName="start" [(ngModel)]="fly.start">
+          <mat-hint style="color:red ;" *ngIf="ADD.get('start') && ADD.get('start')?.errors">
+            Put Time
+           </mat-hint>
+        </mat-form-field>
+      </div>
+
+      <div class="col-4">
+        <mat-form-field  [style.width.px]=357 class="example-full-width"  appearance="outline">
+          <mat-label>Ticket Price</mat-label>
+          <input matInput type="number" placeholder="Enter Ticket Price" name="price" formControlName="price" [(ngModel)]="fly.price">
+          <mat-hint style="color:red ;" *ngIf="ADD.get('price') && ADD.get('price')?.errors">
+            Lowest Price is 35$
+           </mat-hint>
+        </mat-form-field>
+      </div>
+    </div>
+
+  </form>
+
+  <div style="text-align:center">
+    <button (click)="add()"  type="button" class="btn btn-dark">ADD</button>
+
+  </div>
+</div>

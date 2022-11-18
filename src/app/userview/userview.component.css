@@ -1,5 +1,8 @@
+input[type="text"]{
+  width: 250px;
+}
 .f{
-
+background-color: #02122c;
 }
 *{
   margin: 0;

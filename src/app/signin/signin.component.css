@@ -1,0 +1,13 @@
+.imgSignin{
+  background-image: url("https://bueno.com/images/illustrations/vision.jpeg");
+  background-size: cover;
+  height: 300px;
+}
+h3{
+  color: #02122c;
+}
+button{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}

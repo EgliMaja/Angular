@@ -1,0 +1,36 @@
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <div class="container type">
+      <form [formGroup]="searchFlyghts">
+      <div class="row "  id="oneway">
+
+          <div class="col">
+            <input  type="text" placeholder="Country or City" formControlName="flyTo"  [formControl]="FindAirportFrom" name=" flyTo" [(ngModel)]="flybook.flyTo" >
+              <ol *ngIf="FilteredCountriesFrom | async as FromAirport ; else firstRef">
+                <li *ngFor="let city of FromAirport"><i class="fa-solid fa-plane-departure"></i>{{city}} <hr> </li>
+              </ol>
+            <ng-template #firstRef><p class="text-white">...Find Places</p></ng-template>
+          </div>
+
+          <div class="col">
+            <input type="text" placeholder="Country or City" formControlName="depart" [formControl]="FindAirportTo" class="input2" name="depart" [(ngModel)]="flybook.depart">
+            <ol *ngIf="FilteredCountriesTo | async as ToAirport; else secRef">
+              <li  *ngFor="let Country of ToAirport"><i class="fa-solid fa-plane-arrival"></i>{{Country}} <hr></li>
+            </ol>
+            <ng-template #secRef><p class="text-white">...Find Places</p></ng-template>
+          </div>
+
+          <div class="col">
+            <input type="date" name="startDate" class="input3" formControlName="startDate" min="{{FromDate | date:'yyyy-MM-dd' }}" [(ngModel)]="flybook.startDate"></div>
+
+            <div class="col">
+            <input type="date" name="endDate"  class="input4" formControlName="endDate" min="{{DepartDate | date:'yyyy-MM-dd' }}" [(ngModel)]="flybook.endDate"></div>
+          </div>
+
+
+          <div class="row">
+            <button [routerLink]="['/userview']" class="btnFormsource" (click)="search()"><h2><b>Search <i class="fa-solid fa-right-long"></i></b> </h2></button>
+          </div>
+        </form>
+      </div>
+

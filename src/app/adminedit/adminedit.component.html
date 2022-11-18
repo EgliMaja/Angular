@@ -1,0 +1,77 @@
+<h1 style="text-align: center; color: rgb(11, 20, 199);"><b>Edit Data Of Aircraft System</b></h1>
+<hr>
+<div class="container-fluid">
+  <form [formGroup]="dataid">
+
+    <div class="row">
+      <div class="col-4">
+        <mat-form-field appearance="outline" [style.width.px]=357 >
+          <mat-label>From Ariport</mat-label>
+          <mat-select name="FlyFrom" formControlName="FlyFrom">
+            <mat-option *ngFor="let FlyFrom of flyFrom" [value]="FlyFrom.value">
+              {{FlyFrom.viewValue}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+      <div class="col-4">
+        <mat-form-field appearance="outline" [style.width.px]=357 >
+          <mat-label>To Airport</mat-label>
+          <mat-select name="FlyTo" formControlName="FlyTo" >
+            <mat-option *ngFor="let FlyTo of flyTo" [value]="FlyTo.value">
+              {{FlyTo.viewValue}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+      <div class="col-4">
+        <mat-form-field [style.width.px]=357 class="example-full-width"  appearance="outline">
+          <mat-label>Aircraft ID</mat-label>
+          <input matInput type="number" placeholder="Enter ID Aircraft" name="aircraftID" formControlName="aircraftID" >
+        </mat-form-field>
+      </div>
+
+      <div class="col-4">
+        <mat-form-field  [style.width.px]=357 class="example-full-width"  appearance="outline">
+          <mat-label>Aircraft Name</mat-label>
+          <input matInput type="text" placeholder="Enter name Employe" name="aircrafName" formControlName="aircraftName" >
+        </mat-form-field>
+      </div>
+
+      <div class="col-4">
+        <mat-form-field [style.width.px]=357 class="example-full-width"  appearance="outline">
+          <mat-label>Depart</mat-label>
+          <input matInput type="date"  name="depart"  formControlName="depart" >
+        </mat-form-field>
+      </div>
+
+      <div class="col-4">
+        <mat-form-field  [style.width.px]=357 class="example-full-width"  appearance="outline">
+          <mat-label>Return</mat-label>
+          <input matInput type="date"  name="return"  formControlName="return">
+        </mat-form-field>
+      </div>
+
+      <div class="col-4">
+        <mat-form-field  [style.width.px]=357 class="example-full-width"  appearance="outline">
+          <mat-label>Departure Time</mat-label>
+          <input matInput type="time"  name="start"  formControlName="start">
+        </mat-form-field>
+      </div>
+
+      <div class="col-4">
+        <mat-form-field  [style.width.px]=357 class="example-full-width"  appearance="outline">
+          <mat-label>Ticket Price</mat-label>
+          <input matInput type="number" placeholder="Enter Ticket Price" formControlName="price" name="price">
+        </mat-form-field>
+      </div>
+    </div>
+  </form>
+
+  <div style="text-align:center">
+    <button  (click)="update()" type="button" class="btn btn-warning">UPDATE</button>&nbsp;
+    <button routerLink="/adminview" type="button" class="btn btn-dark margin-left">BACK</button>
+  </div>
+</div>

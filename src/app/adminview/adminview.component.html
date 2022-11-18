@@ -1,0 +1,37 @@
+<h1 style="text-align: center; color: rgb(244, 12, 12);"><b>Aircraft Control System</b></h1>
+<hr>
+<div style="text-align: right;">
+  <button mat-raised-button color="primary" (click)="OpenPopup()">Add Flight</button>
+</div>
+<div class="container-fluid mt-5">
+<table class="table table-striped table-bordered">
+  <thead>
+    <tr >
+      <th scope="col">Fly From</th>
+      <th scope="col">Fly To</th>
+      <th scope="col">Aircraft ID</th>
+      <th scope="col">Aircraft Name</th>
+      <th scope="col">Depart</th>
+      <th scope="col">Return</th>
+      <th scope="col">Start</th>
+      <th scope="col">Price</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let flyAirplane of  addedFlights">
+      <td scope="row">{{flyAirplane.flyFrom}}</td>
+      <td>{{flyAirplane.flyTo}}</td>
+      <th>{{flyAirplane.aircraftID}}</th>
+      <td>{{flyAirplane.aircraftName}}</td>
+      <td>{{flyAirplane.depart}}</td>
+      <td>{{flyAirplane.return}}</td>
+      <td>{{flyAirplane.start}}</td>
+      <td>{{flyAirplane.price}}$</td>
+      <td>
+        <i [routerLink]="['/adminedit/update',flyAirplane.id]" style="color: blue ;" class="fa-solid fa-pen-to-square"></i> &nbsp;
+        <i (click)="deleteFlight(flyAirplane)" style="color: red;" class="fa-solid fa-trash"></i>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</div>

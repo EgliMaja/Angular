@@ -1,0 +1,15 @@
+.ticket{
+  box-sizing: border-box;
+  border: 1px solid black;
+  box-shadow: black 0px 2px 5px,
+              black 0px 2px 5px;
+              margin-top: 10%;
+              width: 1000px;
+              display: block;
+              margin-left: auto;
+              margin-right: auto;
+              height: 200px;
+}
+li{
+  list-style-type: none;
+}

@@ -1,0 +1,117 @@
+{
+  "posts": [
+    {
+      "name": "Egli Maja",
+      "email": "majaegli27@gmail.com",
+      "age": 16,
+      "password": "12345678",
+      "id": 2
+    },
+    {
+      "name": "rimi losha",
+      "email": "rimi@gmail.com",
+      "age": 15,
+      "password": "123456789",
+      "id": 3
+    },
+    {
+      "name": "Khaled Hoseini",
+      "email": "hoseini@gmail.com",
+      "age": 22,
+      "password": "987654321",
+      "id": 4
+    },
+    {
+      "name": "Suada Ismailaja",
+      "email": "ada@gmail.com",
+      "age": 15,
+      "password": "87654321",
+      "id": 5
+    },
+    {
+      "name": "Kimete Maja",
+      "email": "kimete1123@gmail.com",
+      "age": 80,
+      "password": "qazwsxedc",
+      "id": 7
+    },
+    {
+      "name": "Johny Deep",
+      "email": "johny1934@gmail.com",
+      "age": 53,
+      "password": "12344321",
+      "id": 8
+    },
+    {
+      "name": "Admin Admin",
+      "email": "admin@gmail.com",
+      "age": 23,
+      "password": "12344321",
+      "id": 9
+    },
+    {
+      "name": "Person ",
+      "email": "majaegli27@gmail.com",
+      "age": 23,
+      "password": "12344321",
+      "id": 10
+    }
+  ],
+  "admin": [
+    {
+      "flyFrom": "Barcelona Spain",
+      "flyTo": "Paris France",
+      "aircraftID": 1236437899,
+      "aircraftName": "Turkish Airlines",
+      "depart": "2022-11-15",
+      "return": "2022-11-17",
+      "start": "00:28",
+      "price": 175,
+      "id": 5
+    },
+    {
+      "flyFrom": "Hanover Germany",
+      "flyTo": "Naples Italy",
+      "aircraftID": 7834332331,
+      "aircraftName": "Air Albania",
+      "depart": "2022-11-30",
+      "return": "2022-12-03",
+      "start": "13:36",
+      "price": 230,
+      "id": 7
+    },
+    {
+      "flyFrom": "Buenos Aires Argentina",
+      "flyTo": "Brusseless Belgium",
+      "aircraftID": 2235345347,
+      "aircraftName": "British Airlines",
+      "depart": "2022-12-01",
+      "return": "2022-12-05",
+      "start": "16:28",
+      "price": 370,
+      "id": 15
+    },
+    {
+      "flyFrom": "International Airport Tirana",
+      "flyTo": "Istanbul Turkey",
+      "aircraftID": 1233545445,
+      "aircraftName": "Turkish Airlines",
+      "depart": "2022-11-25",
+      "return": "2022-11-26",
+      "start": "07:31",
+      "price": 145,
+      "id": 16
+    },
+    {
+      "flyFrom": "Paris France",
+      "flyTo": "Istanbul Turkey",
+      "aircraftID": 1234553435,
+      "aircraftName": "Turkish Airlines",
+      "depart": "2022-11-18",
+      "return": "2022-11-19",
+      "start": "21:46",
+      "price": 550,
+      "id": 17
+    }
+  ]
+}
